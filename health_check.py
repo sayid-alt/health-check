@@ -12,8 +12,12 @@ def check_cpu_usage():
 	usage = psutil.cpu_percent(1)
 	return usage < 75
 
+def check_root_full():
+   """returns true if the root  partition is fuel"""
+   return check_disk_usage(55)
+
 if not check_disk_usage('/') or not check_cpu_usage():
-	print("error!")
+	print(True)
 else:
 	print("everythin is ok!")
 
