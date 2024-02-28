@@ -16,3 +16,6 @@ if not check_disk_usage('/') or not check_cpu_usage():
 	print("error!")
 else:
 	print("everythin is ok!")
+
+
+print('new line')
